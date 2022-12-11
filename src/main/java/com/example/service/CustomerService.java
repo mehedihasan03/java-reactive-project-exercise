@@ -16,7 +16,7 @@ public class CustomerService {
 
     public List<Customer> loadAllCustomers(){
         long start = System.currentTimeMillis();
-        List<Customer> customers = dao.getCustomer();
+        List<Customer> customers = dao.getCustomers();
         long end = System.currentTimeMillis();
         System.out.println("Total execution time : " + (end - start));
         return customers;
@@ -24,7 +24,7 @@ public class CustomerService {
 
     public Flux<Customer> loadAllCustomersStream(){
         long start = System.currentTimeMillis();
-        Flux<Customer> customers = dao.getCustomerStream();
+        Flux<Customer> customers = dao.getCustomersStream();
         long end = System.currentTimeMillis();
         System.out.println("Total execution time : " + (end - start));
         return customers;
